@@ -15,11 +15,8 @@ app.use(cors());
 // })
 
 if(process.env.NODE_ENV === "production"){
-  app.use(express.static("/c-19frontend/build"));
-  const path =require("path");
-  app.get("*", (req, res)=>{
-    res.sendFile(path.resolve(__dirname, '/c-19frontend', '../c-19frontend/build', '../c-19frontend/build/index.html'));
-  })
+  app.use(express.static('client/build'));
+  
 }
 const PORT = process.env.PORT || 5000;
 

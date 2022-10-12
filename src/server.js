@@ -14,7 +14,7 @@ app.use(cors());
 //   res.send('Hello World!')
 // })
 
-if(process.env.NODE_ENV =="production"){
+if(process.env.NODE_ENV === "production"){
   app.use(express.static("/c-19frontend/build"));
   const path =require("path");
   app.get("*", (req, res)=>{
